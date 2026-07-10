@@ -40,7 +40,7 @@ function Home() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/machine-coding">
       <Routes>
         <Route path="/" element={<Home />} />
         {questions.map((q) => (

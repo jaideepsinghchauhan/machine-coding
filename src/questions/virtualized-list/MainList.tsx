@@ -24,7 +24,7 @@ function MainList({ data }: { data: string[] }) {
   // fake full height so scrollbar reflects entire dataset, not just visible slice
   const totalHeight = data.length * ITEM_HEIGHT;
 
-  // pixel shift to position visible batch at the correct scroll offset
+  // pixel shift to position visible batch at the correct scroll offset (it jumps per item not mid of item like 60% visible)
   const offsetY = startIndex * ITEM_HEIGHT;
 
   return (

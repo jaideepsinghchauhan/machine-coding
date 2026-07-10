@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import MainList from "./MainList";
 
 function VirtualizedList() {
-  const data : string[] = Array.from({ length: 500 }, (_, index) => `Item ${index + 1}`);
+  const data : string[] = Array.from({ length: 10000 }, (_, index) => `Item ${index + 1}`);
   
   return (
     <div className="p-8 flex justify-center items-center flex-col">
