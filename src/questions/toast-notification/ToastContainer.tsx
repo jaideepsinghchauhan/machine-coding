@@ -6,8 +6,11 @@ interface Toast {
   message: string;
   type: string;
 }
+type ToastPosition = "top-right" | "top-left" | "bottom-right" | "bottom-left";
 
 export default function ToastContainer() {
+  const [position, setPosition] = useState<ToastPosition>("top-right");
+
   const [toasts, setToasts] = useState<Toast[]>([]);
   // useRef persists data across re-renders WITHOUT triggering a re-render when it changes
   // (unlike useState, which re-renders the component every time it updates)
@@ -34,7 +37,7 @@ export default function ToastContainer() {
   };
   return (
     <div className="my-container">
-      <div className="toast-container">
+      <div className={`toast-container ${position}`}>
         {toasts.map(({ id, message, type }) => {
           return (
             <div className={`toast ${type}`} key={id}>
@@ -46,6 +49,14 @@ export default function ToastContainer() {
           );
         })}
       </div>
+
+      <div className="button-container">
+        <button className="btn-position" onClick={() => setPosition("top-left")}>Top Left</button>
+        <button className="btn-position" onClick={() => setPosition("top-right")}>Top Right</button>
+        <button className="btn-position" onClick={() => setPosition("bottom-left")}>Bottom Left</button>
+        <button className="btn-position" onClick={() => setPosition("bottom-right")}>Bottom Right</button>
+      </div>
+
       <div className="button-container">
         <button
           className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg"
