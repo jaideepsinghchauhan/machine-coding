@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import VirtualizedList from "./questions/virtualized-list/VirtualizedList";
+import ToastContainer from "./questions/toast-container/ToastContainer";
 
 interface Question {
   path: string;
@@ -12,6 +13,11 @@ const questions: Question[] = [
     path: "/virtualized-list",
     name: "Virtualized List",
     component: <VirtualizedList />,
+  },
+  {
+    path: "/toast-notification",
+    name: "Toast Notification",
+    component: <ToastContainer />,
   },
 ];
 
