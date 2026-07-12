@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import VirtualizedList from "./questions/virtualized-list/VirtualizedList";
 import ToastContainer from "./questions/toast-notification/ToastContainer";
 import InfiniteScroll from "./questions/infinite-scroll/InfiniteScroll";
+import FileExplorer from "./questions/file-explorer/FileExplorer";
 
 interface Question {
   path: string;
@@ -25,6 +26,11 @@ const questions: Question[] = [
     name: "Infinite Scroll",
     component: <InfiniteScroll />,
   },
+  {
+    path: "/file-explorer",
+    name: "File Explorer",
+    component: <FileExplorer />,
+  },
 ];
 
 function Home() {
@@ -40,9 +46,7 @@ function Home() {
             to={q.path}
             className="block bg-white shadow rounded-lg p-5 hover:shadow-md hover:-translate-y-0.5 transition-all border border-gray-200"
           >
-            <span className="text-lg font-medium text-gray-800">
-              {q.name}
-            </span>
+            <span className="text-lg font-medium text-gray-800">{q.name}</span>
           </Link>
         ))}
       </div>

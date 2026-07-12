@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 interface Toast {
   id: number;
@@ -37,6 +38,9 @@ export default function ToastContainer() {
   };
   return (
     <div className="my-container">
+      <Link to="/" className="text-blue-600 hover:underline">
+              ← Back to Home
+            </Link>
       <div className={`toast-container ${position}`}>
         {toasts.map(({ id, message, type }) => {
           return (

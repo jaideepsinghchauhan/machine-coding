@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import "./style.css";
 import useBookSearch from "./useBookSearch";
+import { Link } from "react-router-dom";
 export default function InfiniteScroll() {
   const [query, setQuery] = useState("");
   const [pageNumber, setPageNumber] = useState(1);
@@ -33,6 +34,9 @@ export default function InfiniteScroll() {
 
   return (
     <div className="main-container">
+      <Link to="/" className="text-blue-600 hover:underline absolute top-1 left-1">
+        ← Back to Home
+      </Link>
       <div className="content-wrapper">
         <strong>Infinite Scroll</strong>
 
