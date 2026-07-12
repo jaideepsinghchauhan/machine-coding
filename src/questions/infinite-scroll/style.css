@@ -1,0 +1,16 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-wrapper {
+  width: 100%;
+  max-width: 28rem; /* equivalent to Tailwind's max-w-md */
+}
+
+.book-item {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
