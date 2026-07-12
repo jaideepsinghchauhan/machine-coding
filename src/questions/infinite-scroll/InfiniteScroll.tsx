@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import "./style.css";
 import useBookSearch from "./useBookSearch";
 export default function InfiniteScroll() {
   const [query, setQuery] = useState("");
   const [pageNumber, setPageNumber] = useState(1);
 
-  const observer = useRef();
+  const observer = useRef<IntersectionObserver | null>(null);
 
   const { loading, books, hasMore, error } = useBookSearch(query, pageNumber);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -13,10 +13,10 @@ export default function InfiniteScroll() {
     setPageNumber(1);
   };
 
-  // learn useCallback and useRef before jumping on this 
+  // learn useCallback and useRef before jumping on this
   // this useCallback is attached to ref and it gets new node element automatically from the ref html
   const lastElementRef = useCallback(
-    (node) => {
+    (node: HTMLDivElement | null) => {
       if (loading) return;
       if (observer.current) observer.current.disconnect();
 

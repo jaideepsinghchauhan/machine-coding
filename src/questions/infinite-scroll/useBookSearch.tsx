@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function useBookSearch(query: any, pageNumber: any) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState<string[]>([]);
   const [hasMore, setHasMore] = useState(false);
     
   useEffect(() => {
