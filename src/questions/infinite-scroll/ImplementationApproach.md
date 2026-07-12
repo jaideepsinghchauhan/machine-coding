@@ -32,3 +32,5 @@ A callback ref is called directly by React at the exact moment the target DOM el
 With a plain useRef, you'd need to manually add books to a useEffect's dependency array to indirectly detect "the last element probably changed" — functionally works, but less precise/explicit
 Callback refs are the more conventional, widely-recognized pattern for this exact problem (seen in most infinite-scroll implementations), making the code more instantly recognizable to other developers/interviewers
 Both approaches are valid — callback ref is simply the more idiomatic choice for this specific pattern
+
+YT Link: https://www.youtube.com/watch?v=NZKUirTtxcg 

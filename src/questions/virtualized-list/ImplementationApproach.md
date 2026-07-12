@@ -74,3 +74,5 @@ Every time the browser renders a webpage, it goes through these phases:
 
 ## Real-World Validation
 This isn't just theory — **production-grade libraries** like `react-window` and `react-virtualized` use this exact `transform`-based approach internall
+
+YT Link : https://www.youtube.com/watch?v=IFBq4j6htpE

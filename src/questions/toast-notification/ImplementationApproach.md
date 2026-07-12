@@ -22,3 +22,5 @@ Step 7: Tracking Timeouts with useRef (Cleanup Handling)
 Recognized an edge case: if a user manually closes a toast before its 5-second timer fires, the timeout would still eventually fire and call handleClose(id) again on an already-removed toast (harmless here since .filter() is idempotent, but wasteful and not clean).
 Introduced useRef to store a map of toast id → timeout reference, allowing us to clearTimeout() and clean up properly when a toast is manually closed early.
 Chose useRef over useState for this because timeout references are not UI-driving data — updating them shouldn't trigger a re-render.
+
+YT link : https://www.youtube.com/watch?v=uwfrEETtONM
