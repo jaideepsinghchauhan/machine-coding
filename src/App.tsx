@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import VirtualizedList from "./questions/virtualized-list/VirtualizedList";
 import ToastContainer from "./questions/toast-notification/ToastContainer";
+import InfiniteScroll from "./questions/infinite-scroll/InfiniteScroll";
 
 interface Question {
   path: string;
@@ -18,6 +19,11 @@ const questions: Question[] = [
     path: "/toast-notification",
     name: "Toast Notification",
     component: <ToastContainer />,
+  },
+  {
+    path: "/infinite-scroll",
+    name: "Infinite Scroll",
+    component: <InfiniteScroll />,
   },
 ];
 
