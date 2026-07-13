@@ -3,6 +3,8 @@ import VirtualizedList from "./questions/virtualized-list/VirtualizedList";
 import ToastContainer from "./questions/toast-notification/ToastContainer";
 import InfiniteScroll from "./questions/infinite-scroll/InfiniteScroll";
 import FileExplorer from "./questions/file-explorer/FileExplorer";
+import OTP from "./questions/otp/OTP";
+import MultiStepForm from "./questions/multi-step-form/MultiStepForm";
 
 interface Question {
   path: string;
@@ -30,6 +32,16 @@ const questions: Question[] = [
     path: "/file-explorer",
     name: "File Explorer",
     component: <FileExplorer />,
+  },
+  {
+    path: "/otp",
+    name: "OTP Input",
+    component: <OTP otpDigitCount={5} />,
+  },
+  {
+    path: "/multistep-form",
+    name: "MultiStep Form",
+    component: <MultiStepForm />,
   },
 ];
 

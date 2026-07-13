@@ -12,13 +12,13 @@ function MyFolder({ folder }: { folder: IFolder }) {
               {isExpanded ? (
                 <ChevronDown
                   onClick={() => setIsExpanded((prev) => !prev)}
-                  className="inline pr-1"
+                  className="inline pr-1 cursor-pointer"
                   size={20}
                 />
               ) : (
                 <ChevronRight
                   onClick={() => setIsExpanded((prev) => !prev)}
-                  className="inline pr-1"
+                  className="inline pr-1 cursor-pointer"
                   size={20}
                 />
               )}
