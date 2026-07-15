@@ -101,7 +101,7 @@ function MultiStepForm() {
         <Link to="/" className="text-blue-600 hover:underline">
           ← Back to Home
         </Link>
-        <h2 className="text-2xl font-bold mt-4">MultiStep Form</h2>
+        <h2 className="text-2xl font-bold mt-4">MultiStep Tab Form</h2>
       </div>
       <div className="tab-container">
         {tabs.map((tab, index) => {

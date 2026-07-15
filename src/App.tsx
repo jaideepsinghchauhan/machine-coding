@@ -40,7 +40,7 @@ const questions: Question[] = [
   },
   {
     path: "/multistep-form",
-    name: "MultiStep Form",
+    name: "MultiStep Tab Form",
     component: <MultiStepForm />,
   },
 ];
