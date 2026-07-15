@@ -18,7 +18,7 @@ export default function useBookSearch(query: any, pageNumber: any) {
 
     axios({
       method: "GET",
-      url: "http://openlibrary.org/search.json",
+      url: "https://openlibrary.org/search.json",
       params: { q: query, page: pageNumber },
       signal: controller.signal, //this is what actually connects axios to the controller
     })
