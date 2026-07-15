@@ -5,6 +5,7 @@ import InfiniteScroll from "./questions/infinite-scroll/InfiniteScroll";
 import FileExplorer from "./questions/file-explorer/FileExplorer";
 import OTP from "./questions/otp/OTP";
 import MultiStepForm from "./questions/multi-step-form/MultiStepForm";
+import DragDrop from "./questions/drag-drop/DragDrop";
 
 interface Question {
   path: string;
@@ -42,6 +43,11 @@ const questions: Question[] = [
     path: "/multistep-form",
     name: "MultiStep Tab Form",
     component: <MultiStepForm />,
+  },
+  {
+    path: "/drag-drop",
+    name: "Drag and Drop",
+    component: <DragDrop />,
   },
 ];
 
