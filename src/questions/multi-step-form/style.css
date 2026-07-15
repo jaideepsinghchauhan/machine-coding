@@ -1,0 +1,37 @@
+.tab-container {
+  display: flex;
+  .heading {
+    padding: 5px;
+    /* width: 5rem; */
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+.tab-body {
+  padding: 5px;
+  width: 95%;
+  display: flex;
+  border: 1px solid black;
+  height: 250px;
+}
+.tab-container div[data-active="true"] {
+  border: 5px solid grey;
+  border-radius: 5px;
+}
+.form-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  button {
+    border: 1px solid black;
+    padding : 2px 5px;
+    border-radius: 3px;
+  }
+}
+
+.form-errors {
+    color: red;
+
+}

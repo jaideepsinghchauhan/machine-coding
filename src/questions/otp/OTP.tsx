@@ -37,7 +37,7 @@ export default function OTP({ otpDigitCount }: { otpDigitCount: number }) {
         </Link>
         <h2 className="text-2xl font-bold mt-4">OTP Input</h2>
       </div>
-      <div className="flex justify-center gap-1">
+      <div className="otp-class flex justify-center gap-1">
         {inputArr.map((_, index) => {
           return (
             <input
