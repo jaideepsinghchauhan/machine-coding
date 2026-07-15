@@ -1,4 +1,4 @@
-input[type="text"] {
+.otp-class input[type="text"] {
   border: 1px solid black;
   width: 3rem;
   height: 3rem;
