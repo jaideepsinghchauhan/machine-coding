@@ -6,6 +6,7 @@ import FileExplorer from "./questions/file-explorer/FileExplorer";
 import OTP from "./questions/otp/OTP";
 import MultiStepForm from "./questions/multi-step-form/MultiStepForm";
 import DragDrop from "./questions/drag-drop/DragDrop";
+import AutoCompleteSearch from './questions/auto-complete/AutoCompleteSearch'
 
 interface Question {
   path: string;
@@ -49,6 +50,11 @@ const questions: Question[] = [
     name: "Drag and Drop",
     component: <DragDrop />,
   },
+  {
+    path: "/auto-complete",
+    name: "Auto Complete",
+    component: <AutoCompleteSearch />
+  }
 ];
 
 function Home() {
