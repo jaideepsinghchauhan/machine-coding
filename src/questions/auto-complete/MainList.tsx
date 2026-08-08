@@ -50,7 +50,7 @@ return <div>
         { error && <p className="text-red-500">{error}</p>  }
         {loading && <p>Loading...</p>}
         {showData && (  
-            data.map((item, index) => (
+            data.map((item) => (
                 <div className="item" key={item.id}>{item.name}</div>
             ))
         )
