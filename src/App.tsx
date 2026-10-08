@@ -7,6 +7,7 @@ import OTP from "./questions/otp/OTP";
 import MultiStepForm from "./questions/multi-step-form/MultiStepForm";
 import DragDrop from "./questions/drag-drop/DragDrop";
 import AutoCompleteSearch from './questions/auto-complete/AutoCompleteSearch'
+import CardsAnimation from "./questions/cards-animation/CardsAnimation";
 
 interface Question {
   path: string;
@@ -54,6 +55,11 @@ const questions: Question[] = [
     path: "/auto-complete",
     name: "Auto Complete",
     component: <AutoCompleteSearch />
+  },
+  {
+    path: "/cards-animation",
+    name: "Cards Animation",
+    component: <CardsAnimation />
   }
 ];
 
